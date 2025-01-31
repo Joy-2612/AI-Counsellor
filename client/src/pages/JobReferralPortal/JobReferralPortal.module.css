@@ -1,0 +1,600 @@
+.jobPortalContainer {
+  padding: 2rem 1.5rem;
+  overflow-y: scroll;
+  height: 75vh;
+  background: #f8f9ff;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.header {
+  font-family: "Google Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 25%,
+    rgba(136, 5, 157, 1) 40%,
+    rgb(2, 30, 151) 60%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  gap: 10px;
+}
+
+.searchBar {
+  padding: 1rem 1.5rem;
+  width: 75%;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 2px solid #e0e7ff;
+  background: white;
+}
+
+.addButton {
+  background: #316aff;
+  color: white;
+  width: 30%;
+  border: none;
+  padding: 0.9rem 0rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(49, 106, 255, 0.15);
+}
+
+/* Job List Styles */
+.jobList {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.jobGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.jobItem {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid #e0e7ff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.jobItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(49, 106, 255, 0.1);
+}
+
+.jobHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f4ff;
+}
+
+.companyLogoContainer {
+  flex-shrink: 0;
+}
+
+.companyLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+}
+
+.companyLogoPlaceholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: #f0f4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #316aff;
+  font-size: 1.25rem;
+}
+
+.companyInfo {
+  flex: 1;
+}
+
+.companyName {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #2a2a2a;
+}
+
+.referralPill {
+  background: #f0f4ff;
+  color: #316aff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  width: fit-content;
+  margin-top: 0.5rem;
+}
+
+.jobDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.jobMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.jobLink {
+  color: #316aff;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.jobLink:hover {
+  opacity: 0.8;
+}
+
+.postedBy {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #f8f9ff;
+  border-radius: 12px;
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  background: #316aff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.userInfo {
+  line-height: 1.4;
+}
+
+.userName {
+  font-weight: 500;
+  color: #2a2a2a;
+  display: block;
+}
+
+.userEmail {
+  font-size: 0.85rem;
+  color: #6c757d;
+  display: block;
+}
+
+.requestButton {
+  background: #316aff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.requestButton:hover {
+  background: #2856d1;
+  transform: translateY(-1px);
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.emptyState img {
+  width: 300px;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.emptyState p {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Modal Enhancements */
+.modalContent {
+  max-width: 480px;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+/* Dropdown Improvements */
+.dropdownOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.dropdownOption {
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.dropdownOption:hover {
+  background: #f8f9ff;
+}
+
+.dropdownLogo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.75rem;
+  }
+
+  .searchBarContainer {
+    flex-direction: column;
+  }
+
+  .searchBar {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .addButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .jobGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Skeleton Styles */
+.skeletonJobItem {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid #e0e7ff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.skeletonJobHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f4ff;
+}
+
+.skeletonLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: #f0f4ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeletonCompanyInfo {
+  flex: 1;
+}
+
+.skeletonLine {
+  height: 1rem;
+  background: #f0f4ff;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeletonPill {
+  width: 120px;
+  height: 1.5rem;
+  background: #f0f4ff;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeletonJobDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skeletonLink {
+  width: 140px;
+  height: 1.2rem;
+  background: #f0f4ff;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeletonPostedBy {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.skeletonAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f0f4ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeletonUserInfo {
+  flex: 1;
+}
+
+.skeletonButton {
+  width: 100%;
+  height: 40px;
+  background: #f0f4ff;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Skeleton Animation */
+@keyframes skeletonLoading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.skeletonJobItem::after,
+.skeletonLogo::after,
+.skeletonLine::after,
+.skeletonPill::after,
+.skeletonLink::after,
+.skeletonAvatar::after,
+.skeletonButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  );
+  animation: skeletonLoading 1.5s infinite;
+}
+
+/* Add to JobReferralPortal.module.css */
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.modalContent h3 {
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+}
+
+/* Form Group */
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+/* Dropdown Styles */
+.customDropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdownTrigger {
+  border: 2px solid #e0e7ff;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdownTrigger:hover {
+  border-color: #316aff;
+}
+
+.selectedCompany {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dropdownLogo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.placeholder {
+  color: #a0aec0;
+}
+
+.dropdownOptions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid #e0e7ff;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdownOption {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdownOption:hover {
+  background: #f8f9ff;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"] {
+  width: 93%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e7ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #316aff;
+  box-shadow: 0 0 0 3px rgba(49, 106, 255, 0.1);
+}
+
+/* Modal Actions */
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.saveButton {
+  background: #316aff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.saveButton:hover {
+  background: #2856d1;
+  transform: translateY(-1px);
+}
+
+.cancelButton {
+  background: #f0f4ff;
+  color: #4a5568;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelButton:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .modalContent {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .modalActions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .saveButton,
+  .cancelButton {
+    width: 100%;
+    text-align: center;
+  }
+}

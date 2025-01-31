@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh; /* Ensure full height */
+  margin: 0;
+  padding: 0;
+}
+
+/* The main content area to the right of the Sidebar */
+.main-content {
+  flex: 1; /* Takes remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+/* If you want your Navbar on top, and your pages below that,
+   you can nest the Routes in a `.page-content` container */
+.page-content {
+  flex: 1;
+  background-color: #f9f9f9;
+}

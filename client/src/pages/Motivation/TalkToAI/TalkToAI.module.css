@@ -1,0 +1,198 @@
+/* TalkToAI.module.css - Light Theme */
+.vocalContainer {
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  background: #f8f9ff;
+  color: #2a2a2a;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.visualization {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9ff 100%);
+  border-bottom: 1px solid #e0e7ff;
+}
+
+.waveform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  height: 80px;
+}
+
+.waveBar {
+  width: 4px;
+  height: 20px;
+  background: #316aff;
+  border-radius: 2px;
+  animation: wavePulse 1.2s ease-in-out infinite;
+}
+
+@keyframes wavePulse {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(2.5);
+  }
+}
+
+.active .waveBar {
+  background: #00c781;
+  animation: activePulse 0.8s ease-in-out infinite;
+}
+
+@keyframes activePulse {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(3);
+  }
+}
+
+.micButton {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  background: #316aff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(49, 106, 255, 0.2);
+}
+
+.micButton:hover:not(:disabled) {
+  transform: scale(1.1);
+  box-shadow: 0 4px 25px rgba(49, 106, 255, 0.3);
+}
+
+.micButton:disabled {
+  background: #a0b4ff;
+  cursor: not-allowed;
+}
+
+.micButton.listening {
+  background: #00c781;
+  box-shadow: 0 0 30px rgba(0, 199, 129, 0.2);
+}
+
+.status {
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.transcript {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 2rem;
+  background: #ffffff;
+}
+
+.bubble {
+  max-width: 70%;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  animation: bubbleAppear 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.bubble.user {
+  background: rgba(49, 106, 255, 0.1);
+  border: 1px solid #316aff;
+  margin-left: auto;
+}
+
+.bubble.ai {
+  background: #ffffff;
+  border: 1px solid #e0e7ff;
+  margin-right: auto;
+}
+
+.bubbleHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  color: #6c757d;
+}
+
+.bubbleIcon {
+  font-size: 0.8rem;
+  color: #316aff;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #8b95a5;
+}
+
+.bubbleContent {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #2a2a2a;
+}
+
+.recommendations {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f8f9ff;
+  border-radius: 1rem;
+  border: 1px solid #e0e7ff;
+}
+
+.recommendationsHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #316aff;
+  font-size: 0.9rem;
+}
+
+.recommendation {
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  background: rgba(49, 106, 255, 0.05);
+  border-radius: 0.8rem;
+  font-size: 0.95rem;
+  border: 1px solid #e0e7ff;
+}
+
+.error {
+  padding: 1rem;
+  background: #ffe6e6;
+  color: #ff4444;
+  text-align: center;
+  border: 1px solid #ffcccc;
+  border-radius: 8px;
+}
+
+.hiddenAudio {
+  display: none;
+}
+
+@keyframes bubbleAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

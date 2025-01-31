@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<systemPrompt>
+  <instructions>
+    <heading>Produce a Structured XML Output</heading>
+    <step1>Read the user questions and answers provided below in &lt;UserInput&gt;.</step1>
+    <step2>From the provided questions and answers, extract or infer the user's qualifications, biography, goals, hobbies and location.</step2>
+    <step3>Return your response strictly in XML format using the following structure:</step3>
+    <xmlStructure>
+      <GeminiResponse>
+        <Qualifications></Qualifications>
+        <Bio></Bio>
+        <Goals></Goals>
+        <Hobbies></Hobbies>
+        <Location></Location>
+      </GeminiResponse>
+    </xmlStructure>
+    <requirement>
+      Make sure the output is valid XML, with no additional commentary or text outside the <GeminiResponse> root element.
+    </requirement>
+    <note>
+      Generate the concised responses for the qualifications, bio, goals, hobbies and location.
+    </note>
+  </instructions>
+</systemPrompt>

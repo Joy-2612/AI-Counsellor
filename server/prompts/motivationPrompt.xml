@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<systemPrompt>
+  <instructions>
+    <heading>Produce a Structured XML Output</heading>
+    <step>Generate some content for the motivation.</step>
+    <step>Return your response strictly in XML format using the following structure:</step>
+    <xmlStructure>
+    <GeminiResponse>
+        <motivation>
+            <quote>
+                <text></text>
+                <author></author>
+            </quote>
+            <tips>
+                <tip1></tip1>
+                <tip2></tip2>
+                <tip3></tip3>
+            </tips>
+            <videos>
+                <video1>
+                    <title></title>
+                    <description></description>
+                    <link></link>
+                </video1>
+                <video2>
+                    <title></title>
+                    <description></description>
+                    <link></link>
+                </video2>
+                <video3>
+                    <title></title>
+                    <description></description>
+                    <link></link>
+                </video3>
+            </videos>
+        </motivation>
+    </xmlStructure>
+    <note1>
+      There is no limit or threshold on the number of tips and videos, you can generate any number.
+    </note1>
+    <note2>
+      The links should contain the exact link of the youtube video and not the query result.
+      some default video links (in case you didn't find any relevant video) : 
+      <link1>https://www.youtube.com/watch?v=wnHW6o8WMas&ab_channel=BenLionelScott<link1>
+      <link2>https://www.youtube.com/watch?v=SP0rC1J6EJg&ab_channel=BenLionelScott<link2>
+      <link3>https://www.youtube.com/watch?v=2a-SylGx-JI&ab_channel=BenLionelScott<link3>
+      <please>Don't send the rick rolling video<please>
+    </note2>
+    <requirement>
+      Make sure the output is valid XML, with no additional commentary or text outside the <GeminiResponse> root element.
+    </requirement>
+  </instructions>
+</systemPrompt>

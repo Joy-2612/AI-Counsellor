@@ -1,0 +1,235 @@
+/* Profile.module.css */
+.profilePage {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.profileContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Test Card */
+.testCard {
+  background: #316aff;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 4px 20px rgba(49, 106, 255, 0.15);
+}
+
+.testContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.testContent p {
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.testButton {
+  background: white;
+  color: #316aff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.testButton:hover {
+  transform: translateY(-2px);
+}
+
+.testIllustration {
+  font-size: 3rem;
+  margin-left: 2rem;
+}
+
+/* Profile Header */
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.avatarContainer {
+  position: relative;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  background: #e0e7ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #316aff;
+}
+
+.editAvatarBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white;
+  border: 2px solid #e0e7ff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.editAvatarBtn:hover {
+  background: #f8f9ff;
+  transform: scale(1.1);
+}
+
+.profileInfo h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2a2a2a;
+}
+
+.metaInfo {
+  display: flex;
+  gap: 1.5rem;
+  color: #6c757d;
+}
+
+.metaInfo span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Details Grid */
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.detailCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.detailCard h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #2a2a2a;
+}
+
+.detailItem {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.detailIcon {
+  color: #316aff;
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+
+.detailContent label {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.2rem;
+}
+
+.detailContent p {
+  margin: 0;
+  color: #2a2a2a;
+  line-height: 1.5;
+}
+
+/* Edit Inputs */
+.editInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #e0e7ff;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.editTextarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  border: 2px solid #e0e7ff;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.editBtn,
+.saveBtn,
+.cancelBtn,
+.logoutBtn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.editBtn {
+  background: #316aff;
+  color: white;
+}
+
+.saveBtn {
+  background: #00c853;
+  color: white;
+}
+
+.cancelBtn {
+  background: #ff6b6b;
+  color: white;
+}
+
+.logoutBtn {
+  background: none;
+  color: #ff4444;
+  border: 2px solid #ffcccc;
+}
+
+.editBtn:hover,
+.saveBtn:hover,
+.cancelBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logoutBtn:hover {
+  background: #fff0f0;
+}
