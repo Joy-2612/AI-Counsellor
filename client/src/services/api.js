@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000", // Your server URL
+  baseURL: "https://ai-counsellor-vjlu.onrender.com", // Your server URL
 });
 
 // Add an interceptor for adding token to the request if you are using JWT
