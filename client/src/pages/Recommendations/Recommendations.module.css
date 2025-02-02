@@ -59,7 +59,7 @@
 .cardsWrapper {
   display: flex;
   overflow-x: auto;
-  width: 1000px;
+  width: 1130px;
   gap: 1rem;
   padding: 1rem;
   scroll-behavior: smooth;
