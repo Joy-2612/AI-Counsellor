@@ -9,6 +9,10 @@ function TestStartPage() {
     navigate("/test"); // Navigate to the test route
   };
 
+  const handleSkipTest = () => {
+    navigate("/profile"); // Navigate to the profile page
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -34,9 +38,15 @@ function TestStartPage() {
             </div>
           </div>
 
-          <button className={styles.startButton} onClick={handleStartTest}>
-            Begin Assessment
-          </button>
+          <div className={styles.buttonGroup}>
+            <button className={styles.startButton} onClick={handleStartTest}>
+              Begin Assessment
+            </button>
+            <button className={styles.skipButton} onClick={handleSkipTest}>
+              Already given?
+              <br></br>Skip Assessment
+            </button>
+          </div>
         </div>
       </div>
     </div>
