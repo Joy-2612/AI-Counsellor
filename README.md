@@ -191,3 +191,5 @@ JWT_SECRET=some_secret_key (if you want to customize)
 ### License
 
 This project is licensed under the MIT License. You are free to modify and distribute this project under its terms.
+
+**Made by :** [Joy-2612](https://github.com/Joy-2612) & [vaibhavi-singh-673](https://github.com/vaibhavi-singh-673)
